@@ -1,0 +1,51 @@
+@import "../../assets/variables";
+
+.container_first_post_card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 640px;
+
+  header img {
+    border-radius: 8px;
+  }
+
+  > div {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    span {
+      font-size: 0.875rem;
+      color: transparentize($blue, 0.6%);
+    }
+    p {
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: hidden;
+    }
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+
+    > div span {
+      padding: 4px 12px;
+      background: transparentize($blue, 0.8%);
+      border-radius: 4px;
+    }
+
+    a {
+      padding: 12px;
+      border-radius: 4px;
+      background: transparentize($blue, 0.8%);
+      color: $blue;
+      font-weight: bold;
+    }
+  }
+}
