@@ -1,5 +1,8 @@
 import { NavLink } from "react-router-dom";
-import { Home, Newspaper, PcCase, Circle } from "lucide-react";
+import { FaCircleNotch } from "react-icons/fa";
+import { BiSolidHome } from "react-icons/bi";
+import { LuPcCase } from "react-icons/lu";
+import { FiFileText } from "react-icons/fi";
 
 import styles from "./styles.module.scss";
 
@@ -7,26 +10,26 @@ export function Header() {
   return (
     <header className={styles.container__header}>
       <div>
-        <Circle />
+        <FaCircleNotch size={24} />
         <h1>Untitled UI</h1>
       </div>
       <nav>
         <ul className={styles.container__nav__list}>
           <li>
             <NavLink to="/">
-              <Home />
+              <BiSolidHome size={22} />
               Home
             </NavLink>
           </li>
           <li>
             <NavLink to="/public">
-              <Newspaper />
+              <FiFileText size={22} />
               Publications
             </NavLink>
           </li>
           <li>
             <NavLink to="/about">
-              <PcCase />
+              <LuPcCase size={22} />
               About
             </NavLink>
           </li>

@@ -1,0 +1,18 @@
+@import "../../assets/variables";
+
+.container__root {
+  display: flex;
+  align-items: center;
+
+  background: transparentize($gray, 0.9%);
+  border-radius: 4px;
+  border: 1px solid $gray;
+
+  &:focus-within {
+    border-color: $blue;
+
+    input {
+      box-shadow: none;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+@import "../../assets/variables";
+
+.container__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 8px;
+  background: transparent;
+  color: $blue;
+}

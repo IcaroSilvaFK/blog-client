@@ -55,3 +55,10 @@ ol,
 ul {
   list-style-type: none;
 }
+
+img,
+picture {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}

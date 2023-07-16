@@ -1,18 +1,18 @@
 import { createBrowserRouter } from "react-router-dom";
 
-import * as Pages from "../pages";
+import { Home } from "../pages";
 import { Post } from "../features/dtos/posts.dto";
+import { httpClient } from "../utils/clientHttp";
 
 export const router = createBrowserRouter([
   {
     index: true,
-    element: <Pages.Home />,
+    element: <Home />,
     loader: async () => {
-      const data = await fetch("http://localhost:8000/api/posts/home");
-      const json = (await data.json()) as Promise<Post[]>;
+      const data = await httpClient.get<Post[]>("/posts/home?limit=4");
 
       return {
-        posts: json,
+        posts: data,
       };
     },
   },
