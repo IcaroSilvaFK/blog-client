@@ -1,0 +1,39 @@
+@import "../../assets/variables";
+
+.container__card_comment {
+  display: flex;
+  align-items: center;
+  background: transparentize($gray, 0.9%);
+  gap: 8px;
+  padding: 8px;
+  border-radius: 4px;
+
+  img {
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+  }
+  > div {
+    display: flex;
+    flex-direction: column;
+
+    div {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+
+      span:first-of-type {
+        color: $white;
+      }
+      div {
+        width: 6px;
+        height: 6px;
+        background: $gray;
+        border-radius: 50%;
+      }
+    }
+    p {
+      padding: 8px 0;
+    }
+  }
+}

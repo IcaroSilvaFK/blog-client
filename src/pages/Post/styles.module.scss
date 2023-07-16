@@ -1,0 +1,87 @@
+@import "../../features/assets/variables";
+
+.container__post {
+  @include main;
+
+  .post__content_section {
+    > header {
+      padding: 12px 0;
+
+      h1 {
+        font-size: 2rem;
+
+        @media screen and (max-width: 500px) {
+          font-size: 1.5rem;
+        }
+      }
+      > div {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+
+        img {
+          width: 45px;
+          height: 45px;
+        }
+
+        > div {
+          display: flex;
+          align-items: center;
+          gap: 6px;
+          div {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: $gray;
+          }
+          span:first-of-type {
+            color: $white;
+          }
+          span {
+            font-size: 0.875rem;
+          }
+        }
+      }
+    }
+
+    > article {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+      align-items: flex-start;
+
+      img {
+        max-height: 600px;
+        object-fit: cover;
+        border-radius: 8px;
+
+        box-shadow: 0 0 60px transparentize($gray, 0.6%);
+      }
+
+      span {
+        font-size: 0.875rem;
+        padding: 4px 12px;
+        background: transparentize($gray, 0.9%);
+        border-radius: 4px;
+        border: 1px solid $gray;
+      }
+    }
+
+    > div {
+      padding: 32px 0;
+      font-size: 1.125rem;
+      line-height: 150%;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    @media screen and (max-width: 1200px) {
+      max-width: 90%;
+      margin: 0 auto;
+    }
+  }
+}

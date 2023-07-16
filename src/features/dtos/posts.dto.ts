@@ -1,3 +1,6 @@
+import { CommentDTO } from "./comment.dto";
+import { UserDTO } from "./user.dto";
+
 export interface Post {
   id: number;
   user_id: number;
@@ -6,16 +9,6 @@ export interface Post {
   thumb: string;
   content: string;
   created_at: string;
-  user: {
-    id: number;
-    firstName: string;
-    lastName: string;
-    email: string;
-    thumb: string;
-  };
-  comments: {
-    id: number;
-    comment: string;
-    created_at: string;
-  }[];
+  user: UserDTO;
+  comments: CommentDTO[];
 }

@@ -64,4 +64,13 @@
       }
     }
   }
+
+  @media screen and (max-width: 500px) {
+    flex-direction: column;
+    width: 100%;
+
+    img {
+      max-width: 100%;
+    }
+  }
 }

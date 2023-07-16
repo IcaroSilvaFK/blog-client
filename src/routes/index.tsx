@@ -1,7 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
 
-import { Home } from "../pages";
+import { Home, PostPage } from "../pages";
 import { Post } from "../features/dtos/posts.dto";
+
 import { httpClient } from "../utils/clientHttp";
 
 export const router = createBrowserRouter([
@@ -13,6 +14,19 @@ export const router = createBrowserRouter([
 
       return {
         posts: data,
+      };
+    },
+  },
+  {
+    path: "/post/:id",
+    element: <PostPage />,
+    loader: async ({ params }) => {
+      const { id } = params;
+
+      const post = await httpClient.get(`/posts/${id!}`);
+
+      return {
+        post,
       };
     },
   },

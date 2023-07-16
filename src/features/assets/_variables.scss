@@ -5,3 +5,12 @@ $gray: #676767;
 $white: #ffffff;
 
 $fontSans: "Open Sans", sans-serif;
+
+@mixin main {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 33px;
+}

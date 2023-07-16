@@ -1,4 +1,5 @@
 import { formatDistance } from "date-fns";
+import { Link } from "react-router-dom";
 
 import styles from "./styles.module.scss";
 
@@ -32,7 +33,7 @@ export function FirstPostCard(props: FirstPostCardProps) {
         <div>
           <span>{slug}</span>
         </div>
-        <a href={`/posts/${id}`}>Read more</a>
+        <Link to={`/post/${id}`}>Read more</Link>
       </footer>
     </div>
   );

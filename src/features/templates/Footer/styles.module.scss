@@ -1,0 +1,11 @@
+@import "../../assets/variables";
+
+.container__footer {
+  border-top: 1px solid $gray;
+  padding: 22px 0;
+
+  span {
+    font-size: 0.75rem;
+    font-style: italic;
+  }
+}

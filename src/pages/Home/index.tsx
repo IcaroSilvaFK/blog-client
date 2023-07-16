@@ -12,7 +12,7 @@ export function Home() {
   const firstPost = posts.at(0)!;
 
   return (
-    <div className={styles.container_home}>
+    <main className={styles.container_home}>
       <Header />
       <form>
         <InputRoot.Container>
@@ -32,6 +32,6 @@ export function Home() {
           ))}
         </ul>
       </section>
-    </div>
+    </main>
   );
 }
